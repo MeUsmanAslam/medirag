@@ -5,6 +5,10 @@ import os
 app = Flask(__name__)
 
 # Define a route for the 'ask' endpoint
+@app.route('/')
+def home():
+    return 'Welcome to the Home Page!'
+    
 @app.route('/ask')
 def hello_world():
     return 'Hello, World!'
